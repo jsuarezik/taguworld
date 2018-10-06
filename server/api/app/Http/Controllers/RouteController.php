@@ -33,7 +33,7 @@ class RouteController extends Controller
             $query = RelationLoaderController::apply($request, $this->model, $query);
         }
         if (is_null($id)) {
-            $response = $query->paginate();
+            $response = $query->get();
         } else {
             $response = $query->where(['id' => $id])->get();
         }

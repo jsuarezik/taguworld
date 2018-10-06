@@ -26,7 +26,7 @@ $router->get('/key', function() {
 $router->post('/auth/login', 'AuthController@postLogin');
 
 //GRoup with protection to login users.
-$router->group(['middleware' => 'auth:api', 'prefix' => 'api'], function($app)
+$router->group(['prefix' => 'api'], function($app)
 {
     $app->get('/test', function() {
         return response()->json([

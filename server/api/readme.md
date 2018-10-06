@@ -22,3 +22,14 @@ php -S localhost:8000 -t public
 ```sh
 php artisan migrate --seed
 ```
+
+## Rutas
+
+GET /api/routes Lista toda las rutas
+GET /api/routes/{id} Detalle de una ruta
+POST /api/routes Crea una ruta
+POST /api/routes/{id}/driver Le asigna un driver a la ruta 
+
+GET /api/drivers Lista toda las conductores
+GET /api/drivers/{id} Detalle de una conductor
+POST /api/drivers Crea una conductor
